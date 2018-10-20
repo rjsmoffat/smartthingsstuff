@@ -27,7 +27,7 @@ definition(
 )
 
 preferences {
-   // Get thermostats and device to control heating and an over ride device 
+   // Get thermostats and device to control heating and an override device 
     
     section("Choose Thermostats") {
         input "thermostats", "capability.Thermostat", multiple: true, required: true, title: "Select"
@@ -35,7 +35,7 @@ preferences {
     section("Choose Actuator") {
         input "actuator", "capability.Switch", multiple: false, required: true, title: "Select one"
     }
-    section("Choose Override Switch") {
+    section("Choose Override Switch") {  //Create as a virtual switch unless you want a real one.
         input "override", "capability.Switch", multiple: false, required: true, title: "Select one"
     }
 }
